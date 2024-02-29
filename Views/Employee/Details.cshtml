@@ -1,0 +1,44 @@
+﻿@model GestionDesEmployees.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model._name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model._name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model._email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model._email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model._phone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model._phone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model._city)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model._city)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.EmployeeId">Edit</a> |
+   
+    <button class="btn btn-primary" asp-action="/Index">Back to List</button>
+    
+</div>
